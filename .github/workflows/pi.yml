@@ -1,9 +1,7 @@
 name: gaiaPi
-on: 
-  push:
-    branches: main
+on: [push, pull_request]
+
    
-  
 jobs:
   gaiaPi:
     runs-on: ubuntu-latest
