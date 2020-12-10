@@ -1,11 +1,11 @@
 FROM faddat/sos-full
 
-ENV GOPATH=/root/go
 ENV PATH=$PATH:/root/go/bin
 
 
 # Set Hostname
-RUN echo "gaia" > /etc/hostname && \
+RUN pacman -Syyu go && \
+      echo "gaia" > /etc/hostname && \
 # Build Gaia and clean up.  Later use a pkgbuild
       git clone https://github.com/cosmos/gaia && \
       cd gaia && \
