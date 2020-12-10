@@ -4,7 +4,7 @@ ENV PATH=$PATH:/root/go/bin
 
 
 # Set Hostname
-RUN pacman -Syyu go && \
+RUN pacman -Syyu --noconfirm go && \
       echo "gaia" > /etc/hostname && \
 # Build Gaia and clean up.  Later use a pkgbuild
       git clone https://github.com/cosmos/gaia && \
@@ -22,5 +22,5 @@ RUN useradd --create-home gaia && \
         echo "gaia" > /etc/hostname && \
         echo "gaia:gaia" | chpasswd && \
         usermod --append --groups wheel spn && \
-        passwd -e root
+        passwd -e gaia
 
