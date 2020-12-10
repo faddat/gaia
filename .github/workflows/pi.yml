@@ -1,9 +1,9 @@
-name: graviton
+name: gaiaPi
 on: [push, pull_request]
 
 jobs:
 
-  sos-full:
+  gaiaPi:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
