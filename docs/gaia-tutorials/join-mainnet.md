@@ -23,7 +23,7 @@ This Quickstart tutorial completes the following actions:
 * Put the `genesis.json` file in the correct location
 
 ```bash
-git clone -b v5.0.5 https://github.com/cosmos/gaia
+git clone -b v4.2.6 https://github.com/cosmos/gaia
 cd gaia
 make install
 gaiad init chooseanicehandle
